@@ -12,7 +12,10 @@ import GoogleRatingBadge from "@/components/GoogleRatingBadge.astro";
       src={heroImage.src}
       alt="Clean, modern laundromat interior at The Washboard in Murray, KY"
       class="w-full h-full object-cover"
+      width={heroImage.width}
+      height={heroImage.height}
       loading="eager"
+      fetchpriority="high"
     />
     <div class="absolute inset-0 bg-primary/70"></div>
   </div>

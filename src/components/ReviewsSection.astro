@@ -28,7 +28,7 @@ const { reviews, googleBusinessUrl, averageRating, totalReviews } = googleReview
       {[...reviews, ...reviews].map((review) => (
         <div class="review-card bg-card rounded-2xl p-8 shadow-sm border border-border text-center flex flex-col shrink-0 w-[320px]">
           <!-- Stars -->
-          <div class="flex justify-center gap-1 mb-4" aria-label={`${review.rating} out of 5 stars`}>
+          <div class="flex justify-center gap-1 mb-4" role="img" aria-label={`${review.rating} out of 5 stars`}>
             {Array.from({ length: 5 }).map((_, s) => (
               <svg width="18" height="18" viewBox="0 0 24 24" fill={s < review.rating ? "#F4B400" : "#D1D5DB"} xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />

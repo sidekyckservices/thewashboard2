@@ -24,9 +24,10 @@ const formattedDate = new Date(post.date).toLocaleDateString("en-US", {
     </p>
     <a
       href={`/blog/${post.slug}`}
+      aria-label={`Read more about ${post.title}`}
       class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity self-start"
     >
-      Read More<span class="sr-only">: {post.title}</span>
+      Read More
     </a>
   </div>
 </div>

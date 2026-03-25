@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import heroImage from "@/assets/hero-laundromat.jpg";
 import { contactInfo } from "@/data/contact";
@@ -8,12 +9,14 @@ import GoogleRatingBadge from "@/components/GoogleRatingBadge.astro";
 <section id="home" class="relative min-h-[85vh] flex items-center">
   <!-- Background image -->
   <div class="absolute inset-0">
-    <img
-      src={heroImage.src}
+    <Image
+      src={heroImage}
       alt="Clean, modern laundromat interior at The Washboard in Murray, KY"
       class="w-full h-full object-cover"
-      width={heroImage.width}
-      height={heroImage.height}
+      width={1440}
+      height={810}
+      format="webp"
+      quality={75}
       loading="eager"
       fetchpriority="high"
     />

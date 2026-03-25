@@ -107,22 +107,21 @@ const { reviews, googleBusinessUrl, averageRating, totalReviews } = googleReview
     const cards = track.querySelectorAll(".review-card") as NodeListOf<HTMLElement>;
 
     function equalize() {
-      // Reset
-      cards.forEach((c) => (c.style.minHeight = ""));
+      requestAnimationFrame(() => {
+        // Reset
+        cards.forEach((c) => (c.style.minHeight = ""));
 
-      // Find tallest card
-      let maxH = 0;
-      cards.forEach((c) => {
-        if (c.offsetHeight > maxH) maxH = c.offsetHeight;
+        // Batch read: find tallest card
+        let maxH = 0;
+        const heights = cards.map((c) => c.offsetHeight);
+        heights.forEach((h) => { if (h > maxH) maxH = h; });
+        const halfWidth = track!.scrollWidth / 2;
+
+        // Batch write: apply all changes together
+        cards.forEach((c) => (c.style.minHeight = maxH + "px"));
+        const duration = halfWidth / 30;
+        track!.style.setProperty("--scroll-duration", duration + "s");
       });
-
-      // Set all to same height
-      cards.forEach((c) => (c.style.minHeight = maxH + "px"));
-
-      // Set scroll duration: ~30px per second for smooth, readable pace
-      const halfWidth = track!.scrollWidth / 2;
-      const duration = halfWidth / 30;
-      track!.style.setProperty("--scroll-duration", duration + "s");
     }
 
     equalize();

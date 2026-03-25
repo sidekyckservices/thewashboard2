@@ -12,5 +12,11 @@ export default defineConfig({
         "@": "/src",
       },
     },
+    build: {
+      cssMinify: true,
+    },
+  },
+  build: {
+    inlineStylesheets: "always",
   },
 });

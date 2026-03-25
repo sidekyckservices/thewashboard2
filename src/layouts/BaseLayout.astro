@@ -19,7 +19,7 @@ const {
   noindex = false,
 } = Astro.props;
 
-const siteUrl = "https://washboardmurray.com";
+const siteUrl = "https://www.washboardmurray.com";
 const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
 const ogImageUrl = ogImage.startsWith("http") ? ogImage : `${siteUrl}${ogImage}`;
 const isHome = Astro.url.pathname === "/";
@@ -66,7 +66,7 @@ import "@/index.css";
         "@type": "Laundromat",
         "name": "The Washboard",
         "description": "Clean, modern laundromat serving Murray, KY and Murray State University. Self-service laundry, wash & fold, and comfortable space.",
-        "url": "https://washboardmurray.com",
+        "url": "https://www.washboardmurray.com",
         "telephone": "270-768-7058",
         "address": {
           "@type": "PostalAddress",

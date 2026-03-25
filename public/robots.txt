@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://washboardmurray.com/sitemap.xml
+Sitemap: https://www.washboardmurray.com/sitemap.xml

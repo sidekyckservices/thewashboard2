@@ -3,7 +3,7 @@ import tailwind from "@astrojs/tailwind";
 import icon from "astro-icon";
 
 export default defineConfig({
-  site: "https://washboardmurray.com",
+  site: "https://www.washboardmurray.com",
   output: "static",
   integrations: [tailwind(), icon()],
   vite: {
